@@ -504,6 +504,11 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.19.3.tgz#e5036be529f757e58d9a7771f2f1b14782986a74"
   integrity sha512-FbUN+0ZRXsypPyWE2IwIkVjDkDnJoMJARWOcFZn4KPPli+QnKqF0z1anvfaYe3ev5HFCpRDLLBDHyOALLppWHw==
 
+"@fontsource/cabin@^5.0.8":
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/cabin/-/cabin-5.0.8.tgz#8ebbd2f6a3ef9801ed9a577bee38b47ecde455e0"
+  integrity sha512-dKUwEkLe8ix9h/gntEILkSFJTa5IDtHKerQl3QXSsMELKYCxELblHuh5itwDA/sJz3O1rJDNybheBsWt59MlCg==
+
 "@jridgewell/gen-mapping@^0.3.0", "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz#7e02e6eb5df901aaedb08514203b096614024098"
