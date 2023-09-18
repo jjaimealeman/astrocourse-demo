@@ -1,4 +1,8 @@
-<h1 class="pb-24">TEST</h1>
+---
+import H1 from "../components/H1.astro";
+---
+
+<H1 text="a test page" />
 
 <a class="p-2 m-8" href="/"><span>LINK 1</span></a>
 <a class="p-2 m-8" href="/"><span>LINK 2</span></a>
@@ -8,42 +12,43 @@
 <a class="p-2 m-8" href="/"><span>LINK 6</span></a>
 
 <style>
-:root {
+  :root {
     --hue: 0;
     --rotation-deg: 15deg;
-}
-a:hover {
+  }
+  a:hover {
     /* background: hsl(180, 100%, 50%); */
     color: #1a1a1a;
-    box-shadow: 0 0 5px #03e9f4,
-    0 0 25px #03e9f4,
-    0 0 50px #03e9f4,
-    0 0 200px #03e9f4;
+    box-shadow:
+      0 0 5px #03e9f4,
+      0 0 25px #03e9f4,
+      0 0 50px #03e9f4,
+      0 0 200px #03e9f4;
     /* -webkit-box-reflect: below 1px linear-gradient(transparent, #0005); */
-}
+  }
 
-a:nth-child(2){
+  a:nth-child(2) {
     background-color: hsl(calc(var(--hue) - 0), 100%, 50%);
     /* filter: hue-rotate(calc(var(--rotation-deg) * 2)); */
-}
-a:nth-child(3){
+  }
+  a:nth-child(3) {
     background-color: hsl(calc(var(--hue) - 5), 100%, 50%);
     /* filter: hue-rotate(calc(var(--rotation-deg) * 4)); */
-}
-a:nth-child(4){
+  }
+  a:nth-child(4) {
     background-color: hsl(calc(var(--hue) - 10), 100%, 50%);
     /* filter: hue-rotate(calc(var(--rotation-deg) * 6)); */
-}
-a:nth-child(5){
+  }
+  a:nth-child(5) {
     background-color: hsl(calc(var(--hue) - 15), 100%, 50%);
     /* filter: hue-rotate(calc(var(--rotation-deg) * 8)); */
-}
-a:nth-child(6){
+  }
+  a:nth-child(6) {
     background-color: hsl(calc(var(--hue) - 20), 100%, 50%);
     /* filter: hue-rotate(calc(var(--rotation-deg) * 10)); */
-}
-a:nth-child(7){
+  }
+  a:nth-child(7) {
     background-color: hsl(calc(var(--hue) - 25), 100%, 50%);
     /* filter: hue-rotate(calc(var(--rotation-deg) * 12)); */
-}
+  }
 </style>
