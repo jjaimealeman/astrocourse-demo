@@ -4,6 +4,7 @@ import Layout from "../../layouts/Layout.astro";
 import Main from "../../components/Main.astro";
 import H1 from "../../components/H1.astro";
 import TableOfContents from "../../components/TableOfContents.astro";
+import Share from "../../components/Share.astro";
 export const getStaticPaths = async () => {
   const posts = await getCollection("posts");
 
@@ -27,7 +28,7 @@ type Props = {
 
 const { post } = Astro.props;
 const { Content, headings } = await post.render();
-console.log(headings);
+// console.log(headings);
 ---
 
 <Layout title={post.data.title}>
@@ -42,6 +43,7 @@ console.log(headings);
       alt={post.data.title}
     />
     <div class="flex relative gap-x-12">
+      <Share post={post} />
       <div class="prose prose-2xl overflow-visible relative">
         <Content />
       </div>
