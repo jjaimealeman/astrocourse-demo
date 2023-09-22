@@ -2,53 +2,33 @@
 import H1 from "../components/H1.astro";
 ---
 
-<H1 text="a test page" />
-
-<a class="p-2 m-8" href="/"><span>LINK 1</span></a>
-<a class="p-2 m-8" href="/"><span>LINK 2</span></a>
-<a class="p-2 m-8" href="/"><span>LINK 3</span></a>
-<a class="p-2 m-8" href="/"><span>LINK 4</span></a>
-<a class="p-2 m-8" href="/"><span>LINK 5</span></a>
-<a class="p-2 m-8" href="/"><span>LINK 6</span></a>
-
-<style>
-  :root {
-    --hue: 0;
-    --rotation-deg: 15deg;
-  }
-  a:hover {
-    /* background: hsl(180, 100%, 50%); */
-    color: #1a1a1a;
-    box-shadow:
-      0 0 5px #03e9f4,
-      0 0 25px #03e9f4,
-      0 0 50px #03e9f4,
-      0 0 200px #03e9f4;
-    /* -webkit-box-reflect: below 1px linear-gradient(transparent, #0005); */
-  }
-
-  a:nth-child(2) {
-    background-color: hsl(calc(var(--hue) - 0), 100%, 50%);
-    /* filter: hue-rotate(calc(var(--rotation-deg) * 2)); */
-  }
-  a:nth-child(3) {
-    background-color: hsl(calc(var(--hue) - 5), 100%, 50%);
-    /* filter: hue-rotate(calc(var(--rotation-deg) * 4)); */
-  }
-  a:nth-child(4) {
-    background-color: hsl(calc(var(--hue) - 10), 100%, 50%);
-    /* filter: hue-rotate(calc(var(--rotation-deg) * 6)); */
-  }
-  a:nth-child(5) {
-    background-color: hsl(calc(var(--hue) - 15), 100%, 50%);
-    /* filter: hue-rotate(calc(var(--rotation-deg) * 8)); */
-  }
-  a:nth-child(6) {
-    background-color: hsl(calc(var(--hue) - 20), 100%, 50%);
-    /* filter: hue-rotate(calc(var(--rotation-deg) * 10)); */
-  }
-  a:nth-child(7) {
-    background-color: hsl(calc(var(--hue) - 25), 100%, 50%);
-    /* filter: hue-rotate(calc(var(--rotation-deg) * 12)); */
-  }
-</style>
+<div
+  class="shadow-mine1 flex flex-col mx-auto max-w-2xl mt-24 p-8 bg-slate-200">
+  <h2
+    class="font-mono font-bold text-gray-700 bg-gray-400 rounded-md block mb-4 pl-4">
+    .mine1
+  </h2>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolores
+    qui rerum iste architecto consequatur earum odio eum, quo corporis
+    blanditiis sapiente quas sequi fuga ipsa in impedit repellat, illo veniam
+    totam. Provident excepturi officia reiciendis cumque similique laborum in
+    quam. Temporibus inventore tenetur vitae deserunt explicabo quasi quos
+    perspiciatis. Asperiores accusamus reprehenderit voluptate magnam!
+  </p>
+</div>
+<div
+  class="shadow-mine2 flex flex-col mx-auto max-w-3xl mt-24 p-8 bg-slate-200">
+  <h2
+    class="font-mono font-bold text-gray-700 bg-gray-400 rounded-md block mb-4 pl-4">
+    .mine2
+  </h2>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolores
+    qui rerum iste architecto consequatur earum odio eum, quo corporis
+    blanditiis sapiente quas sequi fuga ipsa in impedit repellat, illo veniam
+    totam. Provident excepturi officia reiciendis cumque similique laborum in
+    quam. Temporibus inventore tenetur vitae deserunt explicabo quasi quos
+    perspiciatis. Asperiores accusamus reprehenderit voluptate magnam!
+  </p>
+</div>
