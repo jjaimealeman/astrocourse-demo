@@ -3,18 +3,26 @@ import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import PostList from "../components/PostList.astro";
 import H1 from "../components/H1.astro";
+import Main from "../components/Main.astro";
+import Pagination from "../components/Pagination.astro";
 
-const allPosts = await getCollection("posts");
-// console.log(allPosts);
+const { page } = Astro.props;
+const posts = (await getCollection("posts")).slice(0, 6);
+// console.log(posts);
 ---
 
 <Layout title="Blog - Astro Course Demo">
-  <main class="px-24 max-sm:px-5 max-w-7xl mx-auto w-full">
+  <Main>
     <H1 text="Rhythm Nation Blog" />
     <p class="text-zinc-900 text-2xl mb-24 max-sm:mb-14">
       Join the Community &amp; learn from Music Producers and Enthusiasts
     </p>
-
-    <PostList posts={allPosts} />
-  </main>
+    <div class="mb-12">
+      <Pagination nextURL="/blog/2" />
+    </div>
+    <PostList posts={posts} />
+    <div class="mb-36">
+      <Pagination nextURL="/blog/2" />
+    </div>
+  </Main>
 </Layout>
