@@ -10,7 +10,13 @@ module.exports = {
 			},
 			aspectRatio: {
 				thumbnail: '1.5'
-			}
+			},
+			boxShadow: {
+				// 'position X position Y, blur radius, spread radius, color'
+				'mine1': '0px -5px 5px 0px #686868;',
+				'mine2': '0px -10px 8px 0px #484848;',
+				// 'mine2:hover': '0px -10px 8px 0px #abdef;'
+			},
 		},
 	},
 	plugins: [
