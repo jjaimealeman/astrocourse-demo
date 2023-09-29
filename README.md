@@ -52,3 +52,16 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+---
+
+Saturday, September 23, 2023 @ 12:20:57 PM
+
+## ToDo
+- [ ] https://searchengineland.com/create-seo-content-plan-google-sheets-functions-432158
+- [ ] Build and Test a RESTful TypeScript API With Astro, Postman, and Xata  https://www.youtube.com/watch?v=2Mo3q_7NfCY
+- [ ] How to work with data in Astro https://www.youtube.com/watch?v=aS5id2273gY
+- [ ] https://blog.logrocket.com/comparing-popover-api-dialog-element/
+- [ ] install icons
+- [ ] fontsource for fonts
+Installed `localtunnel` to test on mobile devices. Run `lt --port 3000` to start the tunnel.
