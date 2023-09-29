@@ -19,8 +19,26 @@ const postsCollection = defineCollection({
   }),
 });
 
+const testCollection = defineCollection({
+  type: "data", // v2.5.0 and later
+  schema: z.object({
+    name: z.string().max(10, { message: "Name must be less than 10 chars" }),
+    price: z.number(),
+    color: z.string().optional(),
+    brand: z.string(),
+    category: z.enum([
+      "electronics",
+      "clothing",
+      "accessories",
+      "home",
+      "kitchen",
+    ]),
+  }),
+});
+
 // 3. EXPORT A SINGLE 'COLLECTIONS' OBJECT TO REGISTER YOUR COLLECTION(S)
 //    THIS KEY SHOULD MATCH YOUR COLLECTION DIRECTORY NAME IN /src/content
 export const collections = {
   posts: postsCollection,
+  test: testCollection,
 };

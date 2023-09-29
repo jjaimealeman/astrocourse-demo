@@ -1,34 +1,137 @@
 ---
-import H1 from "../components/H1.astro";
+import Layout from "../layouts/Layout.astro";
+import Main from "../components/Main.astro";
+import { getCollection } from "astro:content";
+
+// data method 1: local frontmatter data
+const data1 = ["Isabella", "Olivia", "Dad"];
+
+// data method 2: fetch data from external API
+const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+type Post = {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+};
+const data2: Post[] = await res.json();
+// console.log("🚀 ~ file: test.astro:8 ~ data2:", data2);
+
+// data method 3: import local files
+import moviesJson from "../data/movies.json";
+import carsJson from "../data/cars.json";
+const sortedData = moviesJson.sort((a, b) => a.year - b.year);
+function joinWithAnd(arr: string[]) {
+  if (arr.length === 0) {
+    return "";
+  } else if (arr.length === 1) {
+    return arr[0];
+  } else if (arr.length === 2) {
+    return arr.join(" and ");
+  } else {
+    const last = arr.pop();
+    return `${arr.join(", ")}, and ${last}`;
+  }
+}
+
+// data method 4: content collections
+const testColl = await getCollection("test");
+
+// console.log("🚀 ~ file: test.astro:39 ~ testColl:", testColl);
 ---
 
-<div
-  class="shadow-mine1 flex flex-col mx-auto max-w-2xl mt-24 p-8 bg-slate-200">
-  <h2
-    class="font-mono font-bold text-gray-700 bg-gray-400 rounded-md block mb-4 pl-4">
-    .mine1
-  </h2>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolores
-    qui rerum iste architecto consequatur earum odio eum, quo corporis
-    blanditiis sapiente quas sequi fuga ipsa in impedit repellat, illo veniam
-    totam. Provident excepturi officia reiciendis cumque similique laborum in
-    quam. Temporibus inventore tenetur vitae deserunt explicabo quasi quos
-    perspiciatis. Asperiores accusamus reprehenderit voluptate magnam!
-  </p>
-</div>
-<div
-  class="shadow-mine2 flex flex-col mx-auto max-w-3xl mt-24 p-8 bg-slate-200">
-  <h2
-    class="font-mono font-bold text-gray-700 bg-gray-400 rounded-md block mb-4 pl-4">
-    .mine2
-  </h2>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolores
-    qui rerum iste architecto consequatur earum odio eum, quo corporis
-    blanditiis sapiente quas sequi fuga ipsa in impedit repellat, illo veniam
-    totam. Provident excepturi officia reiciendis cumque similique laborum in
-    quam. Temporibus inventore tenetur vitae deserunt explicabo quasi quos
-    perspiciatis. Asperiores accusamus reprehenderit voluptate magnam!
-  </p>
-</div>
+<Layout title="Test" description="a page for testing things">
+  <Main>
+    <h2 class="font-bold text-lg capitalize underline">
+      local frontmatter data
+    </h2>
+    <ul class="mb-12">
+      {data1.map((i) => <li>{i}</li>)}
+    </ul>
+
+    <h2 class="font-bold text-lg capitalize underline">
+      fetch data from external API
+    </h2>
+    <ul class="mb-12">
+      {
+        data2.slice(0, 5).map((i) => (
+          <li>
+            {i.id} - {i.title} <br /> {i.body}
+          </li>
+        ))
+      }
+    </ul>
+
+    <h2 class="font-bold text-lg capitalize underline">
+      import local files: list of movies
+    </h2>
+    <ul>
+      {
+        sortedData.map((movies) => (
+          <li class="mb-4">
+            {movies.year} - <span class="underline">{movies.title}</span>{" "}
+            starring {joinWithAnd(movies.starring)} <br />{" "}
+            <span class="italic pl-8">{movies.plot}</span>
+          </li>
+        ))
+      }
+    </ul>
+    <h2 class="font-bold text-lg capitalize underline">
+      import local files: list of popular cars
+    </h2>
+    <ul>
+      {
+        carsJson.map((cars) => (
+          <li class="mb-4">
+            {cars.year}&nbsp;{cars.make}&nbsp;{cars.model}
+          </li>
+        ))
+      }
+    </ul>
+
+    <h2 class="font-bold text-lg capitalize underline">content collections</h2>
+    <ul>
+      {
+        testColl.map((item) => (
+          <li class="mb-4">
+            {item.id}. - {item.data.name} - ${item.data.price} -{" "}
+            {item.data.color} - {item.data.brand} - {item.data.category}
+          </li>
+        ))
+      }
+    </ul>
+
+    <div
+      class="shadow-mine1 flex flex-col mx-auto max-w-2xl mt-24 p-8 bg-slate-200">
+      <h2
+        class="font-mono font-bold text-gray-700 bg-gray-400 rounded-md block mb-4 pl-4">
+        .mine1
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+        dolores qui rerum iste architecto consequatur earum odio eum, quo
+        corporis blanditiis sapiente quas sequi fuga ipsa in impedit repellat,
+        illo veniam totam. Provident excepturi officia reiciendis cumque
+        similique laborum in quam. Temporibus inventore tenetur vitae deserunt
+        explicabo quasi quos perspiciatis. Asperiores accusamus reprehenderit
+        voluptate magnam!
+      </p>
+    </div>
+    <div
+      class="shadow-mine2 flex flex-col mx-auto max-w-3xl mt-24 p-8 bg-slate-200">
+      <h2
+        class="font-mono font-bold text-gray-700 bg-gray-400 rounded-md block mb-4 pl-4">
+        .mine2
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+        dolores qui rerum iste architecto consequatur earum odio eum, quo
+        corporis blanditiis sapiente quas sequi fuga ipsa in impedit repellat,
+        illo veniam totam. Provident excepturi officia reiciendis cumque
+        similique laborum in quam. Temporibus inventore tenetur vitae deserunt
+        explicabo quasi quos perspiciatis. Asperiores accusamus reprehenderit
+        voluptate magnam!
+      </p>
+    </div>
+  </Main>
+</Layout>
