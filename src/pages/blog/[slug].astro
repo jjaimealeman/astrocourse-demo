@@ -31,7 +31,10 @@ const { Content, headings } = await post.render();
 // console.log(headings);
 ---
 
-<Layout title={post.data.title} image="{post.data.image">
+<Layout
+  title={post.data.title}
+  image={post.data.image}
+  description={post.data.description}>
   <Main>
     <a class="text-zinc-500 text-2xl mb-16 underline block" href="/blog"
       ><- Back to all Blogs</a
