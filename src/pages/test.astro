@@ -42,6 +42,40 @@ const testColl = await getCollection("test");
 
 <Layout title="Test" description="a page for testing things">
   <Main>
+    <h2 class="font-bold text-lg capitalize underline">Avatar Hover</h2>
+    <div class="list my-8">
+      <img
+        class="item inline px-2"
+        src="/images/avatars/avatar-01.png"
+        alt=""
+      />
+      <img
+        class="item inline px-2"
+        src="/images/avatars/avatar-02.png"
+        alt=""
+      />
+      <img
+        class="item inline px-2"
+        src="/images/avatars/avatar-03.png"
+        alt=""
+      />
+      <img
+        class="item inline px-2"
+        src="/images/avatars/avatar-04.png"
+        alt=""
+      />
+      <img
+        class="item inline px-2"
+        src="/images/avatars/avatar-05.png"
+        alt=""
+      />
+      <img
+        class="item inline px-2"
+        src="/images/avatars/avatar-06.png"
+        alt=""
+      />
+    </div>
+
     <h2 class="font-bold text-lg capitalize underline">
       local frontmatter data
     </h2>
@@ -135,3 +169,24 @@ const testColl = await getCollection("test");
     </div>
   </Main>
 </Layout>
+
+<style>
+  .list > .item {
+    transition:
+      scale 200ms,
+      translate 200ms;
+  }
+  .list > .item:hover {
+    scale: 1.3;
+  }
+  .list > .item:has(~ .item:hover) {
+    translate: -1.5rem;
+  }
+  .list > .item:hover ~ .item {
+    translate: 1.5rem;
+  }
+  .list > .item:has(+ .item:hover),
+  .list > .item:hover + .item {
+    scale: 1.1;
+  }
+</style>
