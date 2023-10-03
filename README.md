@@ -65,4 +65,5 @@ Saturday, September 23, 2023 @ 12:20:57 PM
 - [ ] install icons
 - [ ] fontsource for fonts
 - [ ] add stylesheet to RSS feed https://docs.astro.build/en/guides/rss/#adding-a-stylesheet
+- [ ] https://michalsnik.github.io/aos/
 Installed `localtunnel` to test on mobile devices. Run `lt --port 3000` to start the tunnel.
