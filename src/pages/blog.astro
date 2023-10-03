@@ -5,9 +5,12 @@ import PostList from "../components/PostList.astro";
 import H1 from "../components/H1.astro";
 import Main from "../components/Main.astro";
 import Pagination from "../components/Pagination.astro";
+import CategoryList from "../components/CategoryList.astro";
 
 const { page } = Astro.props;
 const posts = (await getCollection("posts")).slice(0, 6);
+const allCategories = posts.flatMap((post) => post.data.categories);
+const categories = Array.from(new Set(allCategories));
 // console.log(posts);
 ---
 
@@ -20,6 +23,11 @@ const posts = (await getCollection("posts")).slice(0, 6);
       Join the Community &amp; learn from Music Producers and Enthusiasts
     </p>
     <div class="mb-12">
+      <div
+        class="grid grid-cols-[auto,1fr] gap-x-14 gap-y-3 mb-16 max-lg:grid-cols-1">
+        <h2 class="font-bold text-5xl text-teal-900">Tags</h2>
+        <CategoryList categories={categories} />
+      </div>
       <Pagination nextURL="/blog/2" />
     </div>
     <PostList posts={posts} />
