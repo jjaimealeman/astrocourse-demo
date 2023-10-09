@@ -66,4 +66,11 @@ Saturday, September 23, 2023 @ 12:20:57 PM
 - [ ] fontsource for fonts
 - [ ] add stylesheet to RSS feed https://docs.astro.build/en/guides/rss/#adding-a-stylesheet
 - [ ] https://michalsnik.github.io/aos/
+- [ ] lite youtube embed https://github.com/paulirish/lite-youtube-embed
+- [ ] https://csswizardry.com/2023/09/the-ultimate-lqip-lcp-technique/
+- [ ] https://csswizardry.com/2023/07/core-web-vitals-for-search-engine-optimisation
+- [ ] https://developer.chrome.com/en/docs/lighthouse/performance/speed-index/
+- [ ] https://web.dev/vitals/
+- [ ] https://flexible.dev/blog/single-line-components/
+- [ ] https://codestitch.app/complete-guide-to-freelancing
 Installed `localtunnel` to test on mobile devices. Run `lt --port 3000` to start the tunnel.
