@@ -1,18 +1,22 @@
 ---
+import { getCollection } from "astro:content";
 type Props = {
-  prevURL?: string;
-  nextURL?: string;
+  page: number;
+  numberOfPosts: number;
 };
 
-const { prevURL, nextURL } = Astro.props;
+const { page, numberOfPosts } = Astro.props;
+const postsPerPage = 2;
+const hasPreviousPosts = page > 1;
+const hasNextPosts = numberOfPosts > page * postsPerPage;
 ---
 
 <div class="flex justify-between">
   {
-    prevURL ? (
+    hasPreviousPosts ? (
       <a
         class="bg-teal-900 text-white py-3 px-6 rounded-xl text-xl"
-        href={prevURL}>
+        href={`?page=${page - 1}`}>
         Previous
       </a>
     ) : (
@@ -21,10 +25,10 @@ const { prevURL, nextURL } = Astro.props;
   }
 
   {
-    nextURL ? (
+    hasNextPosts ? (
       <a
         class="bg-teal-900 text-white py-3 px-6 rounded-xl text-xl"
-        href={nextURL}>
+        href={`?page=${page + 1}`}>
         Next
       </a>
     ) : (
