@@ -7,6 +7,7 @@ import TableOfContents from "../../components/TableOfContents.astro";
 import Share from "../../components/Share.astro";
 import { Image } from "astro:assets";
 import { getEntryBySlug } from "astro:content";
+import PostMeta from "../../components/PostMeta.astro";
 
 const { slug } = Astro.params;
 const post = await getEntryBySlug("posts", slug as string);
@@ -27,6 +28,7 @@ const { Content, headings } = await post.render();
       &larr; Back to all Blogs</a
     >
     <H1 text={post.data.title} />
+    <PostMeta post={post} />
     <Image
       class="rounded-2xl shadow-xl mb-28 aspect-thumbnail object-cover"
       src={post.data.image}
