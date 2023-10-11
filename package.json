@@ -17,6 +17,7 @@
     "@astrojs/tailwind": "^5.0.0",
     "@cloudinary/url-gen": "^1.11.2",
     "@fontsource/cabin": "^5.0.8",
+    "@xata.io/client": "^0.26.7",
     "astro": "^3.1.0",
     "date-fns": "^2.30.0",
     "markdown-it": "^13.0.2",
