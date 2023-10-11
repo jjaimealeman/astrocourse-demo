@@ -320,6 +320,20 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
+"@cloudinary/transformation-builder-sdk@^1.5.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@cloudinary/transformation-builder-sdk/-/transformation-builder-sdk-1.6.1.tgz#89942a43a4ed770f74d486e935062c6de9ab3f19"
+  integrity sha512-cBoSFbE4SnXO2QvUq+cYgUpXufmZTgg05Cy+jAdiNRGcC6lN+KO0ybMnLU6yg9cFub2NRkBDpU4N53wg4a977w==
+  dependencies:
+    "@cloudinary/url-gen" "^1.7.0"
+
+"@cloudinary/url-gen@^1.11.2", "@cloudinary/url-gen@^1.7.0":
+  version "1.11.2"
+  resolved "https://registry.yarnpkg.com/@cloudinary/url-gen/-/url-gen-1.11.2.tgz#a454dc77f9efb58c6f2c2f61b84d0d3e2dce9405"
+  integrity sha512-9yL3BlThh3PfyRg/zS8cQVic3FdFaIOp361YrDrQ4fqYbYE47SGWF4ji9KoFxYF4ejfDEptayeG9jF2C465KRQ==
+  dependencies:
+    "@cloudinary/transformation-builder-sdk" "^1.5.1"
+
 "@esbuild/android-arm64@0.18.20":
   version "0.18.20"
   resolved "https://registry.yarnpkg.com/@esbuild/android-arm64/-/android-arm64-0.18.20.tgz#984b4f9c8d0377443cc2dfcef266d02244593622"
@@ -748,6 +762,11 @@
   version "2.0.8"
   resolved "https://registry.yarnpkg.com/@types/unist/-/unist-2.0.8.tgz#bb197b9639aa1a04cf464a617fe800cccd92ad5c"
   integrity sha512-d0XxK3YTObnWVp6rZuev3c49+j4Lo8g4L1ZRm9z5L0xpoZycUPshHgczK5gsUMaZOstjVYYi09p5gYvUtfChYw==
+
+"@xata.io/client@^0.26.7":
+  version "0.26.7"
+  resolved "https://registry.yarnpkg.com/@xata.io/client/-/client-0.26.7.tgz#1a42782bd339b8348fac5ce50b891bb437d865bb"
+  integrity sha512-XSHpAplYKOFu+LUFA+6z7jn2xf0tXFt0NxPH0IP1qIsIeVPcuUZYvTgID7iZWiaPrQKT8A024NH5uiQIcA1snQ==
 
 acorn@^8.10.0:
   version "8.10.0"
