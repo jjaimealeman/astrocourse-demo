@@ -10,7 +10,7 @@ const tables = [
   {
     name: "users",
     columns: [
-      { name: "name", type: "string", notNull: true, defaultValue: "" },
+      { name: "name2", type: "string", notNull: true, defaultValue: "" },
       { name: "password", type: "string", notNull: true, defaultValue: "" },
       {
         name: "email",
@@ -18,6 +18,7 @@ const tables = [
         notNull: true,
         defaultValue: "test@test.com",
       },
+      { name: "name", type: "string", notNull: true, defaultValue: "" },
     ],
     revLinks: [{ column: "user", table: "comments" }],
   },
@@ -30,6 +31,10 @@ const tables = [
       { name: "date", type: "datetime", notNull: true, defaultValue: "now" },
     ],
   },
+  {
+    name: "subscribers",
+    columns: [{ name: "email", type: "email", unique: true }],
+  },
 ] as const;
 
 export type SchemaTables = typeof tables;
@@ -41,9 +46,13 @@ export type UsersRecord = Users & XataRecord;
 export type Comments = InferredTypes["comments"];
 export type CommentsRecord = Comments & XataRecord;
 
+export type Subscribers = InferredTypes["subscribers"];
+export type SubscribersRecord = Subscribers & XataRecord;
+
 export type DatabaseSchema = {
   users: UsersRecord;
   comments: CommentsRecord;
+  subscribers: SubscribersRecord;
 };
 
 const DatabaseClient = buildClient();
