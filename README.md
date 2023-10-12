@@ -73,4 +73,5 @@ Saturday, September 23, 2023 @ 12:20:57 PM
 - [ ] https://web.dev/vitals/
 - [ ] https://flexible.dev/blog/single-line-components/
 - [ ] https://codestitch.app/complete-guide-to-freelancing
+- [ ] add parallax effect https://daily-dev-tips.com/posts/tailwind-css-parallax-effect/
 Installed `localtunnel` to test on mobile devices. Run `lt --port 3000` to start the tunnel.
