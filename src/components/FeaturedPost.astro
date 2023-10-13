@@ -17,7 +17,8 @@ const { post } = Astro.props;
       src={post.data.image}
       width={1024}
       height={1024 / 2}
-      alt="alt"
+      alt={post.data.title}
+      loading="eager"
     />
   </a>
   <div class="">
