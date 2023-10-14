@@ -16,7 +16,7 @@ const getThumbnail = (title: string) => {
   const thumbnail = cloudinary
     .image("astro-course-ogbg")
     .overlay(
-      source(text(title, new TextStyle("Cabin", 64).fontWeight("bold")))
+      source(text(title, new TextStyle("Cabin", 64).fontWeight("bold"))),
     );
 
   return thumbnail.toURL();

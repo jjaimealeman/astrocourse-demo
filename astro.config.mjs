@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 
@@ -9,5 +9,5 @@ export default defineConfig({
   integrations: [tailwind(), sitemap()],
   site: "https://astrocourse-demo.netlify.app",
   output: "server",
-  adapter: netlify()
+  adapter: netlify(),
 });

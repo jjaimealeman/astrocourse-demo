@@ -15,17 +15,18 @@ if (!post) {
   user?.value ? (
     <form
       method="POST"
-      class="grid grid-cols-[1fr,auto] gap-x-3 gap-y-2  items-end max-md:grid-cols-1">
+      class="grid grid-cols-[1fr,auto] gap-x-3 gap-y-2 items-end max-md:grid-cols-1">
       <div class="flex flex-col">
         <label for="comment" class="text-zinc-900 text-2xl mb-2">
           Leave a comment
         </label>
 
-        <input
-          type="text"
+        <textarea
+          class="border border-teal-900 rounded-lg text-2xl px-6 py-6"
           name="comment"
           id="comment"
-          class="border border-teal-900 rounded-lg text-2xl px-6 py-6"
+          cols="30"
+          rows="5"
         />
       </div>
 
