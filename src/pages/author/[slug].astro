@@ -15,7 +15,7 @@ const allPosts = await getCollection("posts");
 const posts = allPosts.filter((post) => post.data.author === author.slug);
 ---
 
-<Layout title={author.data.name} description="">
+<Layout title={author.data.name} description="src/pages/author/[slug].astro">
   <Main>
     <a class="text-zinc-500 text-2xl mb-16 underline block" href="/blog">
       &larr; Back to all Blogs</a
