@@ -58,8 +58,10 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 Saturday, September 23, 2023 @ 12:20:57 PM
 
 ## ToDo
+
+- [ ] UPGRADE ASTRO to 3.3 and use the new PICTURE COMPONENT https://astro.build/blog/astro-330/ yarn upgrade astro --latest
 - [ ] https://searchengineland.com/create-seo-content-plan-google-sheets-functions-432158
-- [ ] Build and Test a RESTful TypeScript API With Astro, Postman, and Xata  https://www.youtube.com/watch?v=2Mo3q_7NfCY
+- [ ] Build and Test a RESTful TypeScript API With Astro, Postman, and Xata https://www.youtube.com/watch?v=2Mo3q_7NfCY
 - [ ] How to work with data in Astro https://www.youtube.com/watch?v=aS5id2273gY
 - [ ] https://blog.logrocket.com/comparing-popover-api-dialog-element/
 - [ ] install icons
@@ -74,4 +76,6 @@ Saturday, September 23, 2023 @ 12:20:57 PM
 - [ ] https://flexible.dev/blog/single-line-components/
 - [ ] https://codestitch.app/complete-guide-to-freelancing
 - [ ] add parallax effect https://daily-dev-tips.com/posts/tailwind-css-parallax-effect/
-Installed `localtunnel` to test on mobile devices. Run `lt --port 3000` to start the tunnel.
+- [ ] https://daisyui.com/blog/9-best-tailwind-css-plugins-for-developers/
+- [ ] https://xata.io/docs/sdk/search
+      Installed `localtunnel` to test on mobile devices. Run `lt --port 3000` to start the tunnel.
