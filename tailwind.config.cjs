@@ -6,7 +6,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Cabin", ...defaultTheme.fontFamily.sans],
+        sans: ["Open Sans Variable", ...defaultTheme.fontFamily.sans],
+        mono: ["Fira Code Variable", ...defaultTheme.fontFamily.mono],
+        serif: ["Merriweather", ...defaultTheme.fontFamily.serif],
       },
       aspectRatio: {
         thumbnail: "1.5",
@@ -19,5 +21,8 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/container-queries")
+  ],
 };
