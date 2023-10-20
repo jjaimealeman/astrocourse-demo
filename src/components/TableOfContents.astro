@@ -2,14 +2,15 @@
 import type { MarkdownHeading } from "astro";
 
 type Props = {
-  heading: MarkdownHeading[];
+  headings: MarkdownHeading[];
 };
 
 const { headings } = Astro.props;
 ---
 
-<nav>
-  <ul class="sticky top-10">
+<nav class="sticky top-10">
+  <ul
+    class="flex flex-col @md:bg-green-400 @lg:bg-red-400 @xl:bg-blue-400 mt-0 pt-0">
     {
       headings.map((heading) => {
         return (
