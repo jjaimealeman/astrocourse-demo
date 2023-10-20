@@ -78,4 +78,6 @@ Saturday, September 23, 2023 @ 12:20:57 PM
 - [ ] add parallax effect https://daily-dev-tips.com/posts/tailwind-css-parallax-effect/
 - [ ] https://daisyui.com/blog/9-best-tailwind-css-plugins-for-developers/
 - [ ] https://xata.io/docs/sdk/search
+- [ ] https://github.com/tailwindlabs/tailwindcss-container-queries
+- [ ] install Flowbite https://flowbite.com
       Installed `localtunnel` to test on mobile devices. Run `lt --port 3000` to start the tunnel.
