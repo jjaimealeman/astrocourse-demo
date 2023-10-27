@@ -5,6 +5,7 @@ import "@fontsource-variable/open-sans";
 import '@fontsource-variable/fira-code';
 import '@fontsource/merriweather';
 import { getThumbnail } from "../cloudinary";
+import TwSizeIndicator from "../components/TwSizeIndicator.astro";
 
 interface Props {
   title: string;
@@ -44,6 +45,7 @@ const {
     <meta property="twitter:image:alt" content={description} />
   </head>
   <body class="min-h-screen grid grid-rows-[auto,1fr,auto]">
+<TwSizeIndicator />
     <Header />
     <slot />
     <Footer />
