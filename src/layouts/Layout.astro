@@ -2,8 +2,8 @@
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import "@fontsource-variable/open-sans";
-import '@fontsource-variable/fira-code';
-import '@fontsource/merriweather';
+import "@fontsource-variable/fira-code";
+import "@fontsource/merriweather";
 import { getThumbnail } from "../cloudinary";
 import TwSizeIndicator from "../components/TwSizeIndicator.astro";
 
@@ -43,16 +43,23 @@ const {
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={image} />
     <meta property="twitter:image:alt" content={description} />
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    ></script>
   </head>
   <body class="min-h-screen grid grid-rows-[auto,1fr,auto]">
-<TwSizeIndicator />
+    <TwSizeIndicator />
     <Header />
     <slot />
     <Footer />
     <script>
+      declare global {
+        interface Window {
+          netlifyIdentity: any;
+        }
+      }
+
       if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
+        window.netlifyIdentity.on("init", (user: any) => {
           if (!user) {
             window.netlifyIdentity.on("login", () => {
               document.location.href = "/admin/";
