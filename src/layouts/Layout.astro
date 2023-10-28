@@ -43,11 +43,23 @@ const {
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={image} />
     <meta property="twitter:image:alt" content={description} />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body class="min-h-screen grid grid-rows-[auto,1fr,auto]">
 <TwSizeIndicator />
     <Header />
     <slot />
     <Footer />
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
   </body>
 </html>
